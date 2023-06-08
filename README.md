@@ -1,73 +1,14 @@
-# React-Tailwind-Vitest
-
-This is a template for a React project using TailwindCSS and Vite/Vitest. It also includes `require('@tailwindcss/forms')` in the `tailwind.config.js` file.
-
-## Scripts
-
-- `npm start` - Starts the development server.
-- `npm test` - Runs the test suite with [Vitest](https://vitest.dev/guide/cli.html#commands). React Testing Library is included along with `@testing-library/user-event`.
-
-See [package.json](./package.json) for more scripts
-
-## Linting and Prettier
-
-This project uses `"standard"` linting with the recommended for `react` and `"prettier"`. This includes recommendations for **rules of hooks** and **a11y.**
-
-It also includes warnings regarding [encapsulating React hooks](https://www.npmjs.com/package/eslint-plugin-use-encapsulation).
-
-It also lints `"testing-library"` and `"jest-dom"`.
-
-## VS Code Extensions and Settings
-
-It also includes sensible VS Code defaults for [settings](./.vscode/settings.json) and [extensions](./.vscode/extensions.json).
-
-For the **settings**, we are doing things like:
-
-- `"css.validate": false,` - TailwindCSS uses a lot of custom CSS syntax that VS Code doesn't understand, so we disable validation.
-- `"editor.formatOnSave": true,` - We want to format our code on save.
-- `"editor.defaultFormatter": "esbenp.prettier-vscode",` - We want to use Prettier to format our code.
-- `"editor.codeActionsOnSave": { "source.fixAll.eslint": true },` - We want to use ESLint to fix any linting errors on save.
-
-You should install the recommended extensions when you open the project in VS Code to get the full benefit of these settings.
-.
-
-## Architecture
-
-This project uses the following architecture heavily inspired by Tania Rascia's [React Architecture](https://www.taniarascia.com/react-architecture-directory-structure/).
-
-- `src/` - All of our source code.
-  - `components/` - All of our React components (`.jsx`). Global shared/reusable components, such as layout (wrappers, navigation), form components, buttons.
-  - `layouts/` - These are components that are meant to wrap other smaller components as part of a **route**. They will usually receive `children`, or might just be `header`, `footer`, `main`, etc.
-  - `hooks/` - All of our custom React hooks (`.js`).
-  - `routes/` - All of our React routes (`.jsx`). Each route is a 'page'.
-  - `services/` - All of our services (`.js`). Services are responsible for making API calls and returning data, for example (api.js). Or, maybe you have a service that is responsible for managing authentication (auth.js). Or, `localStorage` (storage.js). The stuff in here has consequences, that is, **side effects**.
-  - `tests/` - All of our tests (`.test.jsx`).
-  - `utils/` - All of our utility functions (`.js`). Utilities, helpers, constants, and the like. Unlike `services`, these are not responsible for side effects.
-
-### Absolute Imports
-
-This project uses absolute imports for all of our files. This means that we can import files from any directory using the `@` prefix instead of relative paths (e.g. `import Button from '@/components/Button'` instead of `import Button from '../../components/Button'`).
-
-This works for any of the directories in `src/` as listed above. If you need to add more, see [`vite.config.js`](./vite.config.js).
-
-### Dependency Graph
-
-`npm run dep-graph`
-
-This project includes `"dependency-cruiser"`. You can generate a dependency graph by running `npm run dep-graph`. This will be in SVG format by default. You can change this in the `package.json` file.
-
-**Note:** You **must** have [Graphviz](https://graphviz.org/download/) installed for this to work. You can install it using [Homebrew](https://brew.sh/) on macOS with `brew install graphviz`.
-
-Here's an example of what the dependency graph looks like:
-
-![Dependency Graph](./dependency-graph.svg)
-
-## License
-
-[MIT](./LICENSE)
-
-## Credits
-
-This project was bootstrapped with [create-vite](https://vitejs.dev/guide/).
-
-Like it? Give it a ⭐️ on [GitHub](https://github.com/manavm1990/vite-react-tailwind-vitest).
+# Ehler's-Danlos Community Site
+ 
+ This project is the beginning of a social site for those affected by Ehler's-Danlos Syndrome (EDS). It is a place to find community and discuss living with various types of EDS. People will be able to discuss difficulties with EDS and hopefully be able to connect with others who are dealing with the same issues- and possibly provide some solutions. EDS is not well-diagnosed, and there is little medical treatment available. Many of us have found solutions on our own to help navigate our daily lives- this is a place to share that advice!
+ 
+ ## What is Ehler's-Danlos?
+ Ehler's-Danlos Syndrome is a family of genetic conditions that causes abnormalities in connective tissue throughout the body. There are many types of EDS, and it can be difficult to diagnose. Receiving approval for genetic testing can be difficult to impossible- and the most common type, the hypermobile variant, does not yet have a found genetic sequence.
+ 
+ ## About the Author
+ 
+  I'm a new front-end focused developer who is looking to maintain my skills and build new ones- all while starting a passion project that's close to my heart.
+ 
+ Hi, I'm Elliot, and I have hypermobile Ehler's-Danlos Syndrome. I was diagnosed in 2023 when I was 28 years old. This came after a lifetime of injuries and constant pain, and very little help from doctors on managing that pain or my mystery injuries. Even with a diagnosis, most of my doctors are confused when I mention EDS- they don't know much or anything about it.
+ 
+ I recently completed a bootcamp for web development, so I decided to build a site that would help myself and so many others like me. Sharing life stories about injuries, pain, medical gaslighting, braces and mobility aids, and so on. It will also be a place for people with EDS to share solutions that worked for them- how to get comfortable (enough) to sleep, reliable joint braces, employment with EDS, and more!
